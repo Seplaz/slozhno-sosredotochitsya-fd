@@ -43,7 +43,6 @@
 
 .header-decorated-point {
   position: absolute;
-  position: absolute;
   top: 10px;
   right: 20px;
   display: flex;
@@ -238,6 +237,14 @@
   font-size: var(--header-text-size-m);
   line-height: 95.7px;
   text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+/* Экран меньше 375px */
+
+@media (width < 375px) {
+  .page {
+    inline-size: 100vi;
+  }
 }
 
 /* Экран больше чем 375px, но меньше, либо равен 768px */
