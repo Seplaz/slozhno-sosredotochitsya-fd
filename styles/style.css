@@ -4,14 +4,15 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin: 0 auto;
   font-family: "IBM Plex mono", monospace;
   background-color: var(--background-color);
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   background-attachment: fixed;
   max-inline-size: 375px;
-  margin: 0 auto;
 }
 
 .header {
@@ -19,7 +20,6 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content 1fr;
   padding: 10px;
-  inline-size: 100%;
   min-block-size: 668px;
 }
 
@@ -239,21 +239,13 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-/* Экран меньше 375px */
-
-@media (width < 375px) {
-  .page {
-    inline-size: 100vi;
-  }
-}
-
 /* Экран больше чем 375px, но меньше, либо равен 768px */
 
-@media (375px < width <= 768px) {
+@media (width >= 768px) {
   .page {
+    gap: 60px;
     margin: 0 auto;
     max-inline-size: 768px;
-    gap: 60px;
   }
 
   .header {
@@ -382,173 +374,7 @@
 
 /* Экран больше чем 768px, но меньше, либо равен 1024px */
 
-@media (768px < width <= 1024px) {
-  .page {
-    margin: 0 auto;
-    max-inline-size: 1024px;
-    gap: 60px;
-  }
-
-  .header {
-    padding: 20px;
-    min-block-size: 768px;
-  }
-
-  .header-decorated-point {
-    top: 20px;
-    right: 30px;
-  }
-
-  .header__theme-menu {
-    justify-self: center;
-    align-self: start;
-  }
-
-  .header__theme-menu-list {
-    position: relative;
-    bottom: 26px;
-    flex-direction: row;
-  }
-
-  .header__title {
-    position: relative;
-    right: 20px;
-    font-size: var(--header-text-size-t-l);
-    line-height: 129.53px;
-  }
-
-  .header__subtitle {
-    max-inline-size: 491px;
-  }
-
-  .main {
-    gap: 80px;
-  }
-
-  .section {
-    padding-inline: 20px;
-  }
-
-  .section:first-of-type {
-    grid-template-columns: minmax(315px, 1fr);
-    grid-template-rows: 1fr;
-  }
-
-  .section:first-of-type .section__title {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .section:first-of-type .section__card:nth-of-type(1) {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .section:first-of-type .section__card:nth-of-type(2) {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .section:nth-of-type(2) {
-    grid-template-columns: repeat(3, minmax(315px, 1fr));
-    grid-template-rows: 1fr;
-  }
-
-  .section:nth-of-type(2) .section__card:nth-of-type(1) {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .section:nth-of-type(2) .section__card:nth-of-type(2) {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .section:nth-of-type(2) .section__card:nth-of-type(3) {
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  .section:nth-of-type(3) {
-    grid-template-columns: minmax(315px, 1fr);
-    grid-template-rows: 1fr;
-  }
-
-  .section:nth-of-type(3) .section__card:nth-of-type(1) {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .section:nth-of-type(3) .section__card:nth-of-type(2) {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .section:nth-of-type(3) .section__card:nth-of-type(3) {
-    grid-column: 2;
-    grid-row: 3;
-  }
-
-  .section:nth-of-type(3) .section__card:nth-of-type(4) {
-    grid-column: 2;
-    grid-row: 4;
-  }
-
-  .section:nth-of-type(3) .section__card:nth-of-type(5) {
-    grid-column: 2;
-    grid-row: 5;
-  }
-
-  .section:nth-of-type(4) .section__card {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: min-content, repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .section:nth-of-type(4) .section__card .card__title {
-    grid-column: span 3;
-    grid-row: 1;
-  }
-
-  .section:nth-of-type(4) .section__card .card__image:nth-of-type(1) {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-  }
-
-  .section:nth-of-type(4) .section__card .card__image:nth-of-type(2) {
-    grid-column: 3;
-    grid-row: 2 / span 2;
-  }
-
-  .section:nth-of-type(4) .section__card .card__image:nth-of-type(3) {
-    grid-column: 1;
-    grid-row: 3 / span 2;
-  }
-
-  .section:nth-of-type(4) .section__card .card__image:nth-of-type(4) {
-    grid-column: 2;
-    grid-row: 3;
-  }
-
-  .section:nth-of-type(4) .section__card .card__image:nth-of-type(5) {
-    grid-column: 2 / span 2;
-    grid-row: 4;
-  }
-
-  .footer {
-    padding: 20px;
-    min-block-size: 768px;
-  }
-
-  .footer__title {
-    font-weight: 129.53px;
-    font-size: var(--header-text-size-t-l);
-  }
-}
-
-/* Экран больше чем 1024px */
-
-@media (width > 1024px) {
+@media (width >= 1024px) {
   .page {
     gap: 60px;
     margin: 0 auto;
