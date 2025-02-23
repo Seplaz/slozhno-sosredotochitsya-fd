@@ -19,10 +19,6 @@
   /* Вам также нужно будет написать ряд подобных селекторов */
 }
 
-.theme-light .header-decorated-point {
-  display: none;
-}
-
 .theme-light .header__title::selection {
   text-shadow: 4px 4px 0 var(--background-color);
 }
@@ -37,5 +33,9 @@
     --text-color: #353430;
     --background-image: url(../images/cover-image-light.png);
     --background-color: #FFF1F7;
+  }
+
+  .header-decorated-point {
+    display: none;
   }
 }
