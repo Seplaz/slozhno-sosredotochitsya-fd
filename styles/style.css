@@ -20,7 +20,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content 1fr;
   padding: 10px;
-  block-size: 100vb;
+  block-size: 100svb;
   min-block-size: 668px;
 }
 
@@ -140,6 +140,10 @@
   padding-inline: 10px;
 }
 
+.section-images {
+  gap: 10px;
+}
+
 .section__title {
   color: var(--decor-color);
   font-weight: 700;
@@ -196,7 +200,7 @@
   position: relative;
   display: grid;
   padding: 10px;
-  block-size: 100vb;
+  block-size: 100svb;
   min-block-size: 668px;
 }
 
@@ -323,6 +327,7 @@
   .section-images {
     grid-template-columns: repeat(3 1fr);
     grid-template-rows: repeat(4 1fr);
+    gap: 20px;
   }
 
   .section-images .card__title {
